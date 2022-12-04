@@ -1,0 +1,33 @@
+.dayCalendarDiv{
+    position: relative;
+    width: 100%;
+    flex-basis: 100%;
+    height: 190px;
+    background-color: white;
+}
+.listTask{
+    position: relative;
+    width: 100%;
+    height: 165px;
+}
+.scheduleBottomDiv{
+    display: flex;
+    position:absolute;
+    bottom:3px;
+    width: 94%;
+    margin-left: 3%;
+    height: 25px;
+    align-items: center;
+}
+.dayNumberSchedule{
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    position: absolute;
+    right: 0
+}
+.oneMoreTaskLabel{
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+}

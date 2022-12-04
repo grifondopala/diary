@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+body{
+    background-color: var(--grey-bg-color);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#leftNavbar{
+    position: fixed;
+    min-height: 100%;
+    background-color: var(--grey-another);
+    width: 5%;
+    box-shadow: 4px 0px 0px 0px var(--grey-shadow-color);
+    z-index: 10;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#topNavbar{
+    position: absolute;
+    background-color: white;
+    width: 95%;
+    height: 75px;
+    left: 5%;
+    z-index: 1;
+    box-shadow: 0px 6px 0px 0px var(--grey-shadow-color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#contentDiv{
+    position: absolute;
+    width: 94.5%;
+    top: 80px;
+    left: 5.5%;
 }
-
-.App-link {
-  color: #61dafb;
+.leftNavbarIcon{
+    width: 30%;
+    aspect-ratio: 1/1;
+    margin-left: 35%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leftNavbarLabel{
+    width: 100%;
+    text-align: center;
+}
+#leftNavbarDiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.leftNavbarBtnDiv{
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.leftNavbarBtnDiv.activate{
+    background-color: var(--grey-btn-color)
 }

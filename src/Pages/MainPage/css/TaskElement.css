@@ -1,0 +1,26 @@
+.TaskElementDiv{
+    display: flex;
+    border-radius: 0 15px 15px 0px;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    max-height: 50px;
+}
+.nameTask{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--grey-bg-color);
+    margin-left: 3px;
+}
+.timeTask{
+    margin-top: 3px;
+    margin-bottom: 0;
+    color: var(--grey-bg-color);
+    margin-left: 3px;
+}
+.TaskElementDiv.activate{
+    max-height: 1000px;
+    transition: max-height 1s ease;
+}

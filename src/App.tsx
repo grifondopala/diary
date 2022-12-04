@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {MainPage} from "./Pages/MainPage/tsx/MainPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [chosenPage, setChosenPage] = React.useState('mainPage')
+
+    return (
+        <div>
+            <div id={'leftNavbar'}>
+                <div id={'leftNavbarDiv'}>
+                    <div className={chosenPage === 'homePage' ? 'leftNavbarBtnDiv activate' : 'leftNavbarBtnDiv'}>
+                        <img className={'leftNavbarIcon'} src={'/images/homeIcon.png'} />
+                        <label className={'leftNavbarLabel'}>Домой</label>
+                    </div>
+                    <div className={chosenPage === 'mainPage' ? 'leftNavbarBtnDiv activate' : 'leftNavbarBtnDiv'}>
+                        <img className={'leftNavbarIcon'} src={'/images/calendarIcon.png'} />
+                        <label className={'leftNavbarLabel'}>Календарь</label>
+                    </div>
+                </div>
+            </div>
+            <div id={'topNavbar'}>
+
+            </div>
+            <div id={'contentDiv'}>
+                {chosenPage === 'mainPage' && (<MainPage/>)}
+            </div>
+        </div>
+    );
 }
 
 export default App;

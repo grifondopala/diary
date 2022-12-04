@@ -1,0 +1,38 @@
+#addEventBtnLocal{
+    margin-top: auto;
+    margin-bottom: 0;
+}
+#addEventMainDiv{
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: fixed;
+    opacity: 0;
+    width: 500px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#addEventMainDiv.active{
+    pointer-events: auto;
+    opacity: 1;
+    animation-duration: 0.3s;
+    animation-name: showAddEvent;
+}
+
+@keyframes showAddEvent {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
